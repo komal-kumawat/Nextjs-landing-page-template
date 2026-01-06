@@ -17,7 +17,7 @@ export default function AppNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Hero", link: "/" },
+    // { name: "Hero", link: "/" },
     { name: "About", link: "/#about" },
     { name: "Features", link: "/#features" },
     { name: "Testimonials", link: "/#testimonials" },
