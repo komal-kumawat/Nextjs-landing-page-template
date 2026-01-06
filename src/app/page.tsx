@@ -10,13 +10,16 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Features/>
-      <Testimonials/>
-      <CTA/>
-      <Footer/>
+      <Navbar />
+      <main className='flex flex-col justify-center items-center '>
+        <Hero />
+        <About />
+        <Features />
+        <Testimonials />
+        <CTA />
+      </main>
+
+      <Footer />
     </div>
   )
 }
