@@ -25,7 +25,7 @@ export default function AppNavbar() {
   ];
 
   return (
-    <Navbar className="top-4 overflow-visible">
+    <Navbar className="pt-4 top-0 overflow-visible backdrop-blur">
       {/* Desktop */}
       <NavBody>
         <NavbarLogo />
