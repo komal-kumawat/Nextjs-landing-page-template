@@ -12,15 +12,16 @@ import {
   NavbarButton,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-
+import { AnimatedThemeToggler } from "../ui/themeToggle";
 export default function AppNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", link: "/" },
-    { name: "Blogs", link: "/all" },
-    { name: "Books", link: "/books" },
-    { name: "Poems", link: "/poems" },
+    { name: "Hero", link: "/" },
+    { name: "About", link: "/#about" },
+    { name: "Features", link: "/#features" },
+    { name: "Testimonials", link: "/#testimonials" },
+    { name: "CTA", link: "/#cta" },
   ];
 
   return (
@@ -29,7 +30,7 @@ export default function AppNavbar() {
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <NavbarButton href="/all">Explore</NavbarButton>
+        <AnimatedThemeToggler className="p-2 rounded-full hover:bg-neutral-800 transition" />
       </NavBody>
 
       {/* Mobile */}
