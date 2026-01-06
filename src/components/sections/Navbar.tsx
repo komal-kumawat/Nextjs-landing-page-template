@@ -25,13 +25,18 @@ export default function AppNavbar() {
   ];
 
   return (
-    <Navbar className="top-4">
+    <Navbar className="top-4 overflow-visible">
       {/* Desktop */}
       <NavBody>
         <NavbarLogo />
         <NavItems items={navItems} />
-        <AnimatedThemeToggler className="p-2 rounded-full hover:bg-neutral-800 transition" />
+        <div className="ml-auto relative z-50 -mr-4 flex items-center">
+          <AnimatedThemeToggler className="px-5 rounded-full  hover:text-neutral-800 dark:hover:text-neutral-200 text-white transition-colors" />
+        </div>
+
       </NavBody>
+
+
 
       {/* Mobile */}
       <MobileNav>

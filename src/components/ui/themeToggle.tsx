@@ -46,13 +46,14 @@ export const AnimatedThemeToggler = ({
       })
     }).ready
 
-    const { top, left, width, height } =
-      buttonRef.current.getBoundingClientRect()
-    const x = left + width / 2
-    const y = top + height / 2
+    const rect = buttonRef.current.getBoundingClientRect()
+    const x = rect.right
+    const y = rect.top
+
+
     const maxRadius = Math.hypot(
-      Math.max(left, window.innerWidth - left),
-      Math.max(top, window.innerHeight - top)
+      window.innerWidth - x,
+      window.innerHeight - y
     )
 
     document.documentElement.animate(
@@ -64,10 +65,11 @@ export const AnimatedThemeToggler = ({
       },
       {
         duration,
-        easing: "ease-in-out",
+        easing: "cubic-bezier(0.65, 0, 0.35, 1)",
         pseudoElement: "::view-transition-new(root)",
       }
     )
+
   }, [isDark, duration])
 
   return (
